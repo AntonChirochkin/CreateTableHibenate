@@ -1,5 +1,8 @@
+import org.hibernate.SessionFactory;
+
 public class Start {
     public static void main(String[] args) {
-        System.out.println("Погнали");
+        SessionFactory sessionFactory = HibernateUtil.getSession();
+        sessionFactory.close();
     }
 }
